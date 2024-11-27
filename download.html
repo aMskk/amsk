@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis SPRX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+    <img id="backgroundImage" alt="Background Image" class="background-image">
+        <div class="container">
+            <div class="content">
+                <a href="loader.exe" class="download-button">Oasis Loader</a> <a href="#" class="download-button">Manual Installation</a>
+            </div>
+            <a class="footer-text2 made-by">Made by aMsk with ❤️</a>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <p>Not available for now.</p>
+    </div>
+    <script>
+
+         window.addEventListener('load', function() {
+            var imageNumber = Math.floor(Math.random() * 3) + 1; // Change 3 to the number of images you have
+            var imagePath = "images/background" + imageNumber + ".jpg";
+            document.getElementById('backgroundImage').src = imagePath;
+        });
+    </script>
+</body>
+</html>
