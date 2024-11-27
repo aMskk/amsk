@@ -15,7 +15,7 @@
             <div class="content">
                 <h1>Oasis SPRX</h1>
                 <h2>Discover the most powerful plugin for Minecraft PS3</h2>
-                <a href="#" class="download-button">Download now</a>
+                <a href="download.html" class="download-button">Download now</a>
                 <h5>Version 2.2</h5>
             </div>
             <a class="footer-text2 made-by">Made by aMsk with ❤️</a>
@@ -72,35 +72,6 @@
             var imagePath = "images/background" + imageNumber + ".jpg";
             document.getElementById('backgroundImage').src = imagePath;
         });
-
-        document.querySelector('.download-button').addEventListener('click', function(event) {
-            event.preventDefault();
-            var notification = document.getElementById('notification');
-            notification.style.display = 'block';
-            setTimeout(function() {
-                notification.style.animation = 'fadeOut 0.5s ease-in-out forwards';
-                setTimeout(function() {
-                    notification.style.display = 'none';
-                    notification.style.animation = '';
-                }, 500); // Duration of the fade out animation (0.5s)
-            }, 3000); // 3 seconds delay before fading out
-        });
-
-        function handleScroll() {
-            var sections = document.querySelectorAll('.info-section, .qna-section');
-            sections.forEach(function(section) {
-                var sectionPosition = section.getBoundingClientRect().top;
-                var screenPosition = window.innerHeight / 1.3;
-                if (sectionPosition < screenPosition) {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                } else {
-                    section.style.opacity = '0';
-                    section.style.transform = 'translateY(20px)';
-                }
-            });
-        }
-
         window.addEventListener('scroll', handleScroll);
         handleScroll(); // Initial check
     </script>
